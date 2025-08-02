@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+<h1>welcome</h1>
+
+<form action="/hospital/pat_prof_update" method="post">
+    
+    
+    {% csrf_token %}
+    <table>
+
+ 
+    <tr>
+        <td >Patient's ID:</td>
+        <td>{{ pats.PID }}</td>
+    </tr>
+
+
+    <tr>
+    <td>
+    <input  colspan="2" type="submit" value="View My Profile">
+    </td>
+    </tr>
+
+    </table>
+   </form>
+
+   <h2>{{ msg }}</h2>
+   <br>
+   <br>
+
+   <a href="/hospital/patient_desk">Back</a>
+</body>
+
+</html>

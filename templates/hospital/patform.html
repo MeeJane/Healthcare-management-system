@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment</title>
+</head>
+<body>
+<h3>To get Appointment,Furnish Patient's details here..</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    <table align="center" bgcolor="#ef4866" border="1" cellspacing="2" cellpadding="2">
+        <tr>
+        <td>Patient's Name</td>
+        <td>{{ form.Name}}</td>
+        </tr>
+        <tr>
+        <td>ID</td>
+        <td>{{ form.PID }}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{ form.Age }}</td>
+        <tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{ form.Gender }}</td>
+            </tr>
+        
+            <tr>
+                <td>Department </td>
+                <td>{{ form.Department }}</td>
+            </tr>
+            <tr>
+                    <td>Appointment_date_time</td>
+                    <td>{{ form.appointment_date_time }}</td>
+            </tr>
+        
+        <tr>
+        <td>Phone</td>
+        <td>{{ form.mobile_no }}</td>
+        </tr>
+                <tr>
+        <td>Address</td>
+        <td>{{ form.address }}</td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Get Appointment</button></td>
+            </tr>
+            </table>
+            
+            
+            </form>
+            {% endblock %}
+    
+    
+
+</body>
+</html>

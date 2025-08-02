@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors</title>
+</head>
+<body>
+<h1> Available Doctors:</h1>
+
+    <table border="1" cellpadding="3" cellspacing="3">
+
+
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Department </th>
+            <th>Mobile No.</th>
+            <th>Address</th>
+        </tr>
+
+
+{% for doc in docs %}
+        <tr>
+            <td>{{ doc.Name }}</td>
+            <td>{{ doc.DID }}</td>
+            <td>{{ doc.Department }}</td>
+            <td>{{ doc.mobile_no }}</td>
+            <td>{{ doc.address }}</td>
+            
+        </tr>
+{% endfor %}
+    </table>
+
+<br>
+<br>
+
+<br>
+
+<br>
+<br>
+<br>
+
+
+<br>
+<br>
+
+<p>
+    <a href="/hospital/patient_desk" >Back</a>
+</p>
+
+
+</body>
+</html>

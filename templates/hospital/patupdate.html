@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Patient</title>
+</head>
+<body>
+<h2>Update Patient's details here..</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <table align="" border="1" cellspacing="3" cellpadding="3">
+       <tr>
+           <td>Patient's Name</td>
+           <td><input type="text" name="Name" value="{{ pats.Name }}"></td>
+       </tr>
+        <tr>
+           <td>Patient's ID</td>
+           <td><input type="text" name="PID" value="{{ pats.PID }}"></td>
+       </tr>
+        <tr>
+           <td>Age</td>
+           <td><input type="text" name="Age" value="{{ pats.Age }}"></td>
+       </tr>
+        <tr>
+           <td>Gender</td>
+           <td><input type="text" name="Gender" value="{{ pats.Gender }}"></td>
+       </tr>
+        
+        <tr>
+           <td>Department</td>
+           <td><input type="text" name="Department" value="{{ pats.Department }}"></td>
+       </tr>
+        <tr>
+           <td>Appointment Date and Time</td>
+           <td><input type="text" name="appointment_date_time" value="{{ pats.appointment_date_time }}"></td>
+       </tr>
+        <tr>
+           <td>Mobile No</td>
+           <td><input type="tel" name="mobile_no" value="{{ pats.mobile_no }}"></td>
+       </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address" value="{{ pats.address }}"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Update"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

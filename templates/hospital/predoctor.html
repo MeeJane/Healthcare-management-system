@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor</title>
+</head>
+<body>
+  
+<div class="button1">
+    <h4>New User?</h4>
+    <p>
+        <a href="/hospital/doctor_signup">Signup</a>
+    </p>
+</div>
+
+<div class="button2">
+    <h4>Already a User?</h4>
+    <p>
+        <a href="/hospital/doc_log_met">Login</a>
+
+    </p>
+</div>
+{% endblock %}
+
+
+</body>
+</html>

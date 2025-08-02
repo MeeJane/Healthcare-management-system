@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<h2></h2>
+<form action="/hospital/doctor_update/{{ docs.DID }}" method="post">
+    {% csrf_token %}
+    <h1 style="color: #145062">Your Profile:</h1>
+    <table align="" border="1" bgcolor="#20bde3" cellpadding="3" cellspacing="3">
+        <tr>
+            <td>Doctor's Name</td>
+            <td>{{ docs.Name }}</td>
+        </tr>
+         <tr>
+            <td>Doctor's ID</td>
+            <td>{{ docs.DID }}</td>
+        </tr>
+
+       
+        <tr>
+            <td>Department</td>
+            <td>{{ docs.Department }}</td>
+        </tr>
+        <tr>
+            <td>Mobile_no</td>
+            <td>{{ docs.mobile_no }}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{ docs.address }}</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Update"></td>
+        </tr>
+
+    </table>
+</form>
+
+<p>
+    <a href="/hospital/doctor_desk">Back</a>
+
+</p>
+
+
+{% endblock %}
+</body>
+</html>

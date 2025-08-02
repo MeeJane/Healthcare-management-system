@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<h2></h2>
+<form action="/hospital/patient_update/{{ pats.PID }}" method="post">
+    {% csrf_token %}
+    <h1 style="color: #145062">Patient's Profile:</h1>
+    <table align="" border="1" bgcolor="#20bde3" cellpadding="3" cellspacing="3">
+       <p> <tr>
+            <td>Patient's Name</td>
+            <td>{{ pats.Name }}</td>
+        </tr>
+         <tr>
+            <td>Patient's ID</td>
+            <td>{{ pats.PID }}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{ pats.Age }}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{ pats.Gender }} </td>
+         </tr>
+            
+        <tr>
+            <td>Department</td>
+            <td>{{ pats.Department }}</td>
+        </tr>
+
+       
+        <tr>
+            <td>Appointment_date_time</td>
+            <td>{{ pats.appointment_date_time }}</td>
+        </tr>
+        <tr>
+            <td>Mobile_no</td>
+            <td>{{ pats.mobile_no }}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{ pats.address }}</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Update"></td>
+        </tr>
+    </p>
+
+    </table>
+</form>
+
+<p>
+    <a href="/hospital/patient_desk">Back</a>
+
+</p>
+
+
+{% endblock %}
+</body>
+</html>

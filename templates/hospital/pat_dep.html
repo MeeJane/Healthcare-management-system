@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Department</title>
+</head>
+<body>
+<h1>welcome</h1>
+
+<form action="/hospital/spec_search" method="post">
+    
+    
+    {% csrf_token %}
+    <table>
+
+ 
+    <tr>
+        <td >Consultaion Area:</td>
+        <td>{{ docs.Department }}</td>
+    </tr>
+
+
+    <tr>
+    <td>
+    <input  colspan="2" type="submit" value="Check Availability">
+    </td>
+    </tr>
+
+    </table>
+   </form>
+
+   <h2>{{ msg }}</h2>
+   <br>
+   <br>
+
+   <a href="/hospital/patient_desk">Back</a>
+</body>
+
+</html>

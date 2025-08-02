@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Update Doctor</title>
+</head>
+<body>
+<h2>Update your profile here..</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <table align="" border="1" cellpadding="3" cellspacing="3">
+        <tr>
+            <td>Doctor's Name</td>
+            <td><input type="text" name="Name" value="{{ docs.Name }}"/></td>
+        </tr>
+         <tr>
+            <td>Doctor's ID</td>
+            <td><input type="text" name="DID" value="{{ docs.DID }}"/></td>
+        </tr>
+
+       
+        <tr>
+            <td>Department</td>
+            <td><input type="text" name="Department" value="{{ docs.Department }}"></td>
+        </tr>
+        <tr>
+            <td>Mobile_no</td>
+            <td><input type="tel" name="mobile_no" value="{{ docs.mobile_no }}"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address" value="{{ docs.address }}"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Update"></td>
+        </tr>
+
+    </table>
+</form>
+{% endblock %}
+
+</body>
+</html>

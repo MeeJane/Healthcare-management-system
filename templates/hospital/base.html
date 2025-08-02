@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blessings</title>
+    <link rel="icon" href="{% static 'images/hosicon.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <style>
+.topnav {
+
+   text-align: center;
+
+  padding: 1px;
+
+  /* overflow:hidden; */
+
+  color:#e6e0f4;
+
+  background-color: #a37dfa;
+
+  font-size: 10cdpx;
+
+
+
+}
+.topnav a {
+
+  float: right;
+
+  color: #f7576a;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+  font-size: 25px;
+
+}
+.topnav a:hover {
+
+  color: #d1ce0b;
+  background-color: transparent;
+  }
+  .topnav button {
+
+float: right;
+
+color: #f7576a;
+
+text-align: center;
+border: none;
+/* overflow:hidden; */
+
+padding: 14px 16px;
+
+text-decoration: none;
+
+font-size: 25px;
+background-color: transparent;
+
+}
+.topnav button:hover {
+
+color: #d1ce0b;
+background-color: transparent;
+}
+
+
+h3{
+        color:#86cfe6;
+}
+
+.button1 {
+
+        width: 20%;
+        margin: 50px 100px 50px 300px;
+        overflow:hidden;
+
+
+        background-color: #e6e0f4;
+
+    }
+.button1 a{
+   float: right;
+
+  text-decoration: underline;
+
+  color:#0badf4;
+
+  text-align: center;
+
+  padding: 20px 75px;
+
+
+
+  font-size: 20px;
+
+ }
+
+ .button1 a:hover {
+
+  color: #06f75a;
+  background-color: transparent;
+  }
+
+.button2 {
+
+        width: 20%;
+        margin: 50px 300px ;
+        overflow:hidden;
+
+
+        background-color: #e6e0f4;
+
+    }
+.button2 a{
+   float: right;
+
+  text-decoration: underline;
+
+  color:#0badf4;
+
+  text-align: center;
+
+  padding: 20px 75px;
+
+
+
+  font-size: 20px;
+
+ }
+
+ .button2 a:hover {
+
+  color: #06f75a;
+  background-color: transparent;
+  }
+  
+.button3 {
+
+width: 20%;
+margin: 50px 300px ;
+overflow:hidden;
+
+
+background-color: #e6e0f4;
+
+}
+.button3 a{
+float: right;
+
+text-decoration: underline;
+
+color:#0badf4;
+
+text-align: center;
+
+padding: 20px 75px;
+
+
+
+font-size: 20px;
+
+}
+
+.button3 a:hover {
+
+color: #06f75a;
+background-color: transparent;
+}
+
+
+
+
+h4{
+  font-size: 15px;
+  padding: 14px  0px 0px 16px;
+  color: #d33308;
+
+  }
+  h5{
+  
+  color: #145062;
+
+  }
+    </style>
+
+</head>
+
+<body>
+<div class="topnav">
+    <h1>Blessings Hospitals</h1>
+    <h3>Building Healthy Community with Care and Technology</h3>
+   
+    <p>
+      
+      
+        <nav>
+         
+          <form class="" action="/accounts/logoff/" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+        
+      </nav>
+     
+      <a href="/hospital/about">About Us</a>
+      <a href="/hospital/contact">Contact Us</a>
+      
+        <a href="/hospital/prepatient">Patient</a>
+        <a href="/hospital/predoctor">Doctor</a>
+        <a href="/hospital/adm_log_met">Admin</a>
+        
+      
+    </p>
+
+   
+
+</div>
+
+
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>

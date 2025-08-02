@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Patient's Desk</title>
+</head>
+<body>
+<h1>Patient' Details</h1>
+<table border="1" cellspacing="3" cellpadding="3">
+    <tr>
+        <th>Name</th>
+        <th>Patient's ID</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Complaint</th>
+        <th>Department</th>
+        <th>Appointment Date and Time</th>
+        <th>Mobile No</th>
+        <th>Address</th>
+    </tr>
+    {% for pat in pats %}
+    <tr>
+        <td>{{ pat.Name }}</td>
+        <td>{{ pat.PID }}</td>
+        <td>{{ pat.Age}}</td>
+        <td>{{ pat.Gender }}</td>
+        <td>{{ pat.Department }}</td>
+        <td>{{ pat.appointment_date_time }}</td>
+        <td>{{ pat.mobile_no }}</td>
+        <td>{{ pat.address }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+<br>
+<p>
+    <a href="/hospital/" >Home</a>
+</p>
+{% endblock %}
+</body>
+
+</html>
